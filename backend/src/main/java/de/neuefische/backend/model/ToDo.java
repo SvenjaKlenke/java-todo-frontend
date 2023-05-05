@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ToDo {
 
-    private String task;
+    private String description;
+    private String status;
+    private String id;
 
 }

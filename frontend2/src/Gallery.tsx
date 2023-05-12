@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
 import axios from "axios";
 import Card from "./Card";
+import './Gallery.css';
 
 type Task = {
     "description": string,
@@ -31,9 +32,11 @@ function Gallery() {
 
     return (
         <div>
+            <p>
             <input type="text" placeholder="Add new task" value={inputDescription}
                    onChange={useTextInput}/>
             <button onClick={addNewTask}>Add</button>
+            </p>
             {allTasks.map((task) => <Card key = {task.id} description={task.description} status={task.status} id={task.id} getTasks={getTasks}/>)}
         </div>
     );

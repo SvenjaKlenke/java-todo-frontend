@@ -34,7 +34,7 @@ function Gallery() {
             <input type="text" placeholder="Add new task" value={inputDescription}
                    onChange={useTextInput}/>
             <button onClick={addNewTask}>Add</button>
-            {allTasks.map((task) => <Card key = {task.id} description={task.description} status={task.status} id={task.id}/>)}
+            {allTasks.map((task) => <Card key = {task.id} description={task.description} status={task.status} id={task.id} getTasks={getTasks}/>)}
         </div>
     );
 }
